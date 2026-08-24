@@ -106,6 +106,7 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 1px solid 
 .hero-mobile-image { z-index: 1; display: none; background-position: center; background-size: cover; filter: saturate(.92) contrast(.96) brightness(.92); }
 .hero-fallback { z-index: 0; background-position: center; background-size: cover; filter: saturate(.88); }
 .hero-shade { z-index: 2; background: linear-gradient(90deg, rgba(12,26,21,.78) 0%, rgba(12,26,21,.36) 31%, rgba(12,26,21,.04) 67%), linear-gradient(0deg, rgba(11,23,19,.7) 0%, transparent 45%); pointer-events: none; }
+.mobile-hero-content { display: none; }
 .hero-content { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; width: min(100% - 72px, 1360px); min-height: 100svh; margin: 0 auto; padding: 130px 0 118px; }
 .hero h1 { max-width: 650px; margin: 24px 0 19px; font-family: "Cormorant Garamond", serif; font-size: clamp(4.4rem, 8.2vw, 8rem); font-weight: 400; line-height: .84; letter-spacing: -.055em; }
 .hero h1 em, h2 em, blockquote em { font-weight: 400; }
@@ -424,6 +425,16 @@ button:focus-visible, a:focus-visible, input:focus-visible { outline: 1px solid 
   .hero { min-height: 100svh; }
   .hero-video--desktop { display: none; }
   .hero-mobile-image { display: block; background-position: center 30%; }
+  .mobile-hero-content { position: absolute; z-index: 3; left: 22px; right: 22px; bottom: 92px; display: block; color: var(--ivory); }
+  .mobile-hero-content .eyebrow { color: rgba(246,241,232,.78); }
+  .mobile-hero-content h1 { max-width: 320px; margin: 15px 0 13px; font-family: "Cormorant Garamond", serif; font-size: clamp(3.3rem, 13vw, 5rem); font-weight: 400; line-height: .88; letter-spacing: -.055em; }
+  .mobile-hero-content h1 em { font-weight: 400; }
+  .mobile-hero-content p { max-width: 290px; margin: 0 0 22px; color: rgba(246,241,232,.82); font-size: 12px; line-height: 1.6; }
+  .mobile-hero-actions { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+  .mobile-hero-actions .solid-button { min-height: 42px; padding: 12px 16px; }
+  .mobile-hero-link { display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 12px 0; border: 0; background: transparent; color: var(--ivory); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+  .mobile-hero-link svg { transition: transform .2s var(--ease-out); }
+  .mobile-hero-link:hover svg { transform: translateX(4px); }
   .hero-content { width: calc(100% - 44px); min-height: 100svh; padding: 100px 0 80px; }
   .hero h1 { font-size: clamp(4rem, 16vw, 6.6rem); }
   .hero-copy { max-width: 300px; font-size: 12px; }

@@ -320,6 +320,15 @@ export default function Home() {
           <div className="hero-mobile-image" role="img" aria-label="Lumière nourishing shampoo bottle with botanical extracts" style={{ backgroundImage: `url(${assets.mobileHero})` }} />
           <div className="hero-fallback" style={{ backgroundImage: `url(${assets.product})` }} />
           <div className="hero-shade" />
+          <div className="mobile-hero-content">
+            <span className="eyebrow">Botanical shampoo / 300 ml</span>
+            <h1>Nourish <em>long hair.</em></h1>
+            <p>Botanical shampoo. Natural shine.</p>
+            <div className="mobile-hero-actions">
+              <button className="solid-button" onClick={() => scrollToId("collection")}>Shop shampoo <ArrowRight size={14} /></button>
+              <button className="mobile-hero-link" onClick={() => scrollToId("story")}>Discover the ritual <ArrowRight size={14} /></button>
+            </div>
+          </div>
           <div className="hero-foot"><span>Scroll to discover</span><span className="hero-scroll-line" /></div>
         </section>
 

@@ -1,5 +1,16 @@
 # Lumière follow-up
 
+- [x] Shorten the mobile hero headline and supporting text.
+- [x] Verify the compact mobile hero remains readable with clear actions.
+
+- [ ] Add simple mobile-only hero copy and action buttons.
+- [ ] Add the Lumière mark as the favicon.
+- [ ] Validate mobile and desktop hero presentation.
+
+- [ ] Audit all local and managed media references for Vercel portability.
+- [ ] Upload required media as public assets and replace Manus-managed paths.
+- [ ] Add Vercel configuration and validate the production build.
+
 - [x] Use the existing hero video on desktop widths.
 - [x] Use the supplied vertical shampoo image on mobile widths.
 - [x] Validate the hero media switch on desktop and mobile.
