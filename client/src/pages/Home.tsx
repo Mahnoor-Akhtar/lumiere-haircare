@@ -30,7 +30,7 @@ import { toast } from "sonner";
 import { useLocation } from "wouter";
 
 const assets = {
-  heroVideo: "https://assets.mixkit.co/videos/33766/33766-720.mp4",
+  heroVideo: "/assets/lumiere-hero.mp4",
   product: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=88",
   lifestyle: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1800&q=88",
   botanical: "https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&w=1400&q=88",
