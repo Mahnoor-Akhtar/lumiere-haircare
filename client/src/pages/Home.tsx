@@ -30,15 +30,15 @@ import { toast } from "sonner";
 import { useLocation } from "wouter";
 
 const assets = {
-  heroVideo: "/manus-storage/lumiere-hero-reference_ffb35293.mp4",
-  product: "/manus-storage/lumiere-product-reference_32699fc3.png",
+  heroVideo: "https://assets.mixkit.co/videos/33766/33766-720.mp4",
+  product: "https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1200&q=88",
   lifestyle: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1800&q=88",
   botanical: "https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&w=1400&q=88",
   bathroom: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88",
   hair: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=88",
-  longHairReference: "/manus-storage/lumiere-long-hair-reference_cb527a4d.png",
-  mobileHero: "/manus-storage/lumiere-mobile-hero-shampoo_aadef264.png",
-  mark: "/manus-storage/lumiere-mark_fb5c4929.png",
+  longHairReference: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=88",
+  mobileHero: "https://images.unsplash.com/photo-1556229010-4c3e0d2e5c9a?auto=format&fit=crop&w=1200&q=88",
+  mark: "/favicon.svg",
 };
 
 const sectionImages = {
