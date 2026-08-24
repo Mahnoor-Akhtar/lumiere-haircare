@@ -31,24 +31,69 @@ import { useLocation } from "wouter";
 
 const assets = {
   heroVideo: "/manus-storage/lumiere-hero-reference_ffb35293.mp4",
-  product: "/manus-storage/lumiere-product-reference_32699fc3.png",
-  lifestyle: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1800&q=88",
-  botanical: "https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&w=1400&q=88",
-  bathroom: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88",
-  hair: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=88",
+  campaign: [
+    "/manus-storage/lumiere-shampoo-still-01_ea73394d.jpg",
+    "/manus-storage/lumiere-shampoo-still-02_81047d9e.jpg",
+    "/manus-storage/lumiere-shampoo-still-03_a6e21613.jpg",
+    "/manus-storage/lumiere-shampoo-still-04_baaea248.jpg",
+    "/manus-storage/lumiere-shampoo-still-05_3b4aecf3.jpg",
+    "/manus-storage/lumiere-shampoo-still-06_3b6a96fe.jpg",
+    "/manus-storage/lumiere-shampoo-still-07_fd790e7f.jpg",
+    "/manus-storage/lumiere-shampoo-still-08_162e75b4.jpg",
+    "/manus-storage/lumiere-shampoo-still-09_9e0de27f.jpg",
+    "/manus-storage/lumiere-shampoo-still-10_1cbcf052.jpg",
+    "/manus-storage/lumiere-shampoo-still-11_cb33a814.jpg",
+    "/manus-storage/lumiere-shampoo-still-12_54e45336.jpg",
+    "/manus-storage/lumiere-shampoo-still-13_4b4f2619.jpg",
+    "/manus-storage/lumiere-shampoo-still-14_f00eae48.jpg",
+    "/manus-storage/lumiere-shampoo-still-15_f3d74df5.jpg",
+    "/manus-storage/lumiere-shampoo-still-16_b09507d4.jpg",
+    "/manus-storage/lumiere-shampoo-still-17_f536dec2.jpg",
+    "/manus-storage/lumiere-shampoo-still-18_3da1ca3b.jpg",
+    "/manus-storage/lumiere-shampoo-still-19_bbb60053.jpg",
+    "/manus-storage/lumiere-shampoo-still-20_168823b9.jpg",
+    "/manus-storage/lumiere-shampoo-still-21_21fbf10b.jpg",
+    "/manus-storage/lumiere-shampoo-still-22_3bebf3bc.jpg",
+    "/manus-storage/lumiere-shampoo-still-23_9d2440cd.jpg",
+    "/manus-storage/lumiere-shampoo-still-24_66d8370f.jpg",
+    "/manus-storage/lumiere-shampoo-still-25_18be7ce1.jpg",
+    "/manus-storage/lumiere-shampoo-still-26_8dae2b4c.jpg",
+    "/manus-storage/lumiere-shampoo-still-27_2bf93b12.jpg",
+    "/manus-storage/lumiere-shampoo-still-28_6933c8da.jpg",
+    "/manus-storage/lumiere-shampoo-still-29_5ea5435d.jpg",
+    "/manus-storage/lumiere-shampoo-still-30_baeefd8a.jpg",
+  ],
   mark: "/manus-storage/lumiere-mark_fb5c4929.png",
 };
 
-const editorialImages = [
-  "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=85",
-  assets.botanical,
-  assets.lifestyle,
-  "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1000&q=82",
-  assets.bathroom,
-  "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1000&q=82",
-  assets.hair,
-  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=82",
-];
+const sectionImages = {
+  shampooProduct: assets.campaign[0],
+  hairBeauty: assets.campaign[1],
+  hairMacro: assets.campaign[2],
+  hibiscus: assets.campaign[3],
+  rosemary: assets.campaign[4],
+  aloe: assets.campaign[5],
+  botanicalOils: assets.campaign[6],
+  ritualApply: assets.campaign[7],
+  ritualMassage: assets.campaign[8],
+  ritualRestore: assets.campaign[9],
+  beforeHair: assets.campaign[10],
+  afterHair: assets.campaign[11],
+  lifestyleBeauty: assets.campaign[12],
+  shampooHairCombination: assets.campaign[13],
+  shampooCollection: assets.campaign[14],
+  hairOilCollection: assets.campaign[15],
+  hairMaskCollection: assets.campaign[16],
+  scalpSerumCollection: assets.campaign[17],
+  hairElixirCollection: assets.campaign[18],
+  journalRitual: assets.campaign[19],
+  journalIngredients: assets.campaign[20],
+  journalScalp: assets.campaign[21],
+  instagramImages: assets.campaign.slice(22, 30),
+};
+
+const editorialImages = sectionImages.instagramImages;
+const journalImages = [sectionImages.journalRitual, sectionImages.journalIngredients, sectionImages.journalScalp];
 
 const navLinks = [
   { label: "Shop", href: "#collection" },
@@ -69,58 +114,30 @@ type Product = {
 };
 
 const products: Product[] = [
-  {
-    id: "hair-oil",
-    name: "Luxurious Hair Oil",
-    category: "The signature ritual",
-    description: "A weightless botanical blend for softness, shine, and a calmer-looking scalp.",
-    price: 68,
-    image: assets.product,
-    featured: true,
-  },
-  {
-    id: "scalp-serum",
-    name: "Botanical Scalp Serum",
-    category: "Root care",
-    description: "A refreshing concentrate for the quiet beginning of a healthier-looking ritual.",
-    price: 74,
-    image: assets.botanical,
-  },
-  {
-    id: "hair-mask",
-    name: "Nourishing Hair Mask",
-    category: "Weekly treatment",
-    description: "A rich, sensorial veil that leaves lengths feeling supple and renewed.",
-    price: 56,
-    image: assets.bathroom,
-  },
-  {
-    id: "hair-elixir",
-    name: "Repairing Hair Elixir",
-    category: "Finishing touch",
-    description: "A polished final drop for luminous ends and a touchably soft finish.",
-    price: 62,
-    image: assets.hair,
-  },
+  { id: "shampoo", name: "Botanical Shampoo", category: "The signature wash", description: "A gentle botanical cleanse for long hair that feels soft, fresh, and luminous.", price: 38, image: sectionImages.shampooCollection, featured: true },
+  { id: "hair-oil", name: "Golden Hair Oil", category: "Gloss and softness", description: "A light finishing oil for long lengths that catches the light without weight.", price: 46, image: sectionImages.hairOilCollection },
+  { id: "hair-mask", name: "Silk Hair Mask", category: "Weekly treatment", description: "A rich, creamy veil for dry-looking lengths that need a slower kind of care.", price: 52, image: sectionImages.hairMaskCollection },
+  { id: "scalp-serum", name: "Scalp Reset Serum", category: "Root care", description: "A precise dropper treatment for a calm, balanced-feeling scalp.", price: 44, image: sectionImages.scalpSerumCollection },
+  { id: "hair-elixir", name: "Long-Hair Elixir", category: "Finishing touch", description: "A slim, luminous final step for smooth ends and soft movement.", price: 40, image: sectionImages.hairElixirCollection },
 ];
 
 const ingredients = [
-  { name: "Hibiscus", kicker: "Nourish", text: "A mineral-rich botanical known for its softening, conditioning feel.", image: assets.botanical },
-  { name: "Rosemary", kicker: "Awaken", text: "An aromatic green note that brings freshness to the ritual.", image: "https://images.unsplash.com/photo-1515586000433-45406d8e6662?auto=format&fit=crop&w=1200&q=85" },
-  { name: "Golden oils", kicker: "Restore", text: "A thoughtful blend of light oils chosen for slip, shine, and comfort.", image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85" },
-  { name: "Aloe", kicker: "Soothe", text: "A cooling botanical touch that keeps the ritual feeling weightless.", image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=85" },
+  { name: "Hibiscus", kicker: "Nourish", text: "Fresh red petals bring a soft botanical note to the washing ritual.", image: sectionImages.hibiscus },
+  { name: "Rosemary", kicker: "Awaken", text: "Aromatic green branches bring freshness to the scalp-care ritual.", image: sectionImages.rosemary },
+  { name: "Aloe", kicker: "Soothe", text: "Translucent aloe gel keeps the lather feeling light and calm.", image: sectionImages.aloe },
+  { name: "Botanical oils", kicker: "Restore", text: "Golden plant oils add slip, softness, and a luminous finish to lengths.", image: sectionImages.botanicalOils },
 ];
 
 const ritualSteps = [
-  { number: "01", title: "Apply", text: "Warm a few drops between your palms and work gently through the scalp and lengths.", image: assets.bathroom },
-  { number: "02", title: "Massage", text: "Use the pads of your fingers to distribute the oil with a slow, grounding touch.", image: assets.botanical },
-  { number: "03", title: "Restore", text: "Leave in or use overnight. Let the ritual do less, beautifully.", image: assets.hair },
+  { number: "01", title: "Apply", text: "Warm a small amount of product in your palms and work gently through the scalp and lengths.", image: sectionImages.ritualApply },
+  { number: "02", title: "Massage", text: "Use the pads of your fingers to massage the scalp with a slow, grounding touch.", image: sectionImages.ritualMassage },
+  { number: "03", title: "Restore", text: "Let freshly washed lengths fall freely into their natural shine and soft movement.", image: sectionImages.ritualRestore },
 ];
 
 const journalArticles = [
-  { label: "Ritual notes", title: "How to build a healthier hair ritual", image: editorialImages[0], read: "5 min read" },
-  { label: "Botanical index", title: "The ingredients your hair loves", image: editorialImages[1], read: "4 min read" },
-  { label: "Root care", title: "Why scalp care is the foundation", image: editorialImages[3], read: "6 min read" },
+  { label: "Ritual notes", title: "How to build a healthier hair ritual", image: journalImages[0], read: "5 min read" },
+  { label: "Botanical index", title: "The ingredients your hair loves", image: journalImages[1], read: "4 min read" },
+  { label: "Root care", title: "Why scalp care is the foundation", image: journalImages[2], read: "6 min read" },
 ];
 
 function scrollToId(id: string) {
@@ -301,7 +318,6 @@ export default function Home() {
 
   return (
     <div className="site-shell">
-      <div className="announcement-bar"><span>Complimentary shipping on orders over $75</span><span className="announcement-divider" /><span>Discover the ritual</span></div>
       <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
         <div className="header-inner">
           <button className="mobile-menu-trigger" onClick={() => setMenuOpen(true)} aria-label="Open menu"><Menu size={20} /></button>
@@ -325,8 +341,8 @@ export default function Home() {
 
       <main>
         <section className="hero" id="top">
-          <video className="hero-video" autoPlay muted loop playsInline poster={assets.product} aria-label="Lumière botanical hair oil campaign video" onError={(event) => { event.currentTarget.style.display = "none"; }}><source src={assets.heroVideo} type="video/mp4" /></video>
-          <div className="hero-fallback" style={{ backgroundImage: `url(${assets.product})` }} />
+          <video className="hero-video" autoPlay muted loop playsInline aria-label="Lumière shampoo and long hair campaign video" onError={(event) => { event.currentTarget.style.display = "none"; }}><source src={assets.heroVideo} type="video/mp4" /></video>
+          <div className="hero-fallback" />
           <div className="hero-shade" />
           <div className="hero-foot"><span>Scroll to discover</span><span className="hero-scroll-line" /></div>
         </section>
@@ -334,14 +350,14 @@ export default function Home() {
         <section className="intro section-ivory">
           <div className="intro-aside js-reveal"><span className="vertical-word">LUMIÈRE / 2026</span><div className="contour-mark" /></div>
           <div className="intro-copy js-reveal"><ChapterLabel number="02">The art of hair care</ChapterLabel><h2>Nature,<br /><em>refined.</em></h2><p>A modern hair-care ritual inspired by nature and elevated through thoughtful formulation. We make room for the small, steady gestures that return you to yourself.</p><button className="text-button" onClick={() => scrollToId("story")}>Meet Lumière <ArrowRight size={14} /></button></div>
-          <div className="intro-media js-reveal"><img src={assets.botanical} alt="Hibiscus and rosemary arranged in warm sunlight" loading="lazy" /><span className="image-caption">A ritual in bloom / 01</span></div>
+          <div className="intro-media js-reveal"><img src={sectionImages.hairBeauty} alt="Woman with exceptionally long healthy hair flowing in warm botanical light" loading="lazy" /><span className="image-caption">Long hair, luminous / 01</span></div>
         </section>
 
         <section className="featured section-ivory" id="featured">
           <div className="section-heading js-reveal"><div><ChapterLabel number="03">The signature ritual</ChapterLabel><h2>The ritual begins <em>here.</em></h2></div><p>One considered formula to bring softness, shine, and a little more light to the everyday.</p></div>
           <div className="featured-grid">
-            <div className="featured-image-wrap js-reveal"><div className="featured-image"><img src={assets.product} alt="Lumière Luxurious Hair Oil on ivory marble with hibiscus and rosemary" loading="lazy" /></div><div className="floating-stamp"><span>Botanical</span><strong>01</strong><span>Hair Oil</span></div></div>
-            <div className="featured-copy js-reveal"><span className="eyebrow">Luxurious hair oil / 50 ml</span><h3>For hair that catches the light.</h3><p>A weightless, golden blend of botanical oils for lengths that feel nourished, polished, and beautifully touchable.</p><div className="product-meta"><span>${featuredProduct.price}</span><span className="meta-dot" /><span>Made for daily ritual</span></div><div className="product-actions"><button className="solid-button" onClick={() => addToBag(featuredProduct)}>Add to bag <ShoppingBag size={15} /></button><button className="text-button" onClick={() => setActiveProduct(featuredProduct)}>View details <ArrowUpRight size={14} /></button></div><div className="product-note"><Check size={15} /> Conscious formulation, no unnecessary extras.</div></div>
+            <div className="featured-image-wrap js-reveal"><div className="featured-image"><img src={sectionImages.shampooProduct} alt="Lumière emerald glass shampoo bottle with gold pump on a marble pedestal" loading="lazy" /></div><div className="floating-stamp"><span>Botanical</span><strong>01</strong><span>Shampoo</span></div></div>
+            <div className="featured-copy js-reveal"><span className="eyebrow">Botanical shampoo / 300 ml</span><h3>For hair that catches the light.</h3><p>A gentle botanical cleanse for long hair that feels fresh at the roots, soft through the lengths, and luminous in the light.</p><div className="product-meta"><span>${featuredProduct.price}</span><span className="meta-dot" /><span>Made for daily ritual</span></div><div className="product-actions"><button className="solid-button" onClick={() => addToBag(featuredProduct)}>Add to bag <ShoppingBag size={15} /></button><button className="text-button" onClick={() => setActiveProduct(featuredProduct)}>View details <ArrowUpRight size={14} /></button></div><div className="product-note"><Check size={15} /> Conscious formulation, no unnecessary extras.</div></div>
           </div>
         </section>
 
@@ -362,7 +378,7 @@ export default function Home() {
         </section>
 
         <section className="story-image" id="story">
-          <img src={assets.lifestyle} alt="Woman with long flowing hair in a sunlit botanical garden" loading="lazy" />
+          <img src={sectionImages.lifestyleBeauty} alt="Woman with beautiful healthy long hair in a sophisticated sunlit botanical environment" loading="lazy" />
           <div className="story-shade" /><div className="story-copy js-reveal"><ChapterLabel number="06" light>A slower kind of beauty</ChapterLabel><h2>A ritual worth<br /><em>slowing down for.</em></h2><ArrowButton onClick={() => scrollToId("ritual")}>Explore the ritual</ArrowButton></div><span className="image-caption image-caption--light">Lumière / The everyday, elevated</span>
         </section>
 
@@ -374,7 +390,7 @@ export default function Home() {
         <section className="transformation section-sand">
           <div className="transformation-heading js-reveal"><ChapterLabel number="08">The before / after</ChapterLabel><h2>See the difference<br /><em>in your ritual.</em></h2><p>Slide slowly between the before and after texture studies. A reminder that beautiful change can be quiet.</p></div>
           <div className="comparison js-reveal" style={{ "--split": `${sliderPosition}%` } as React.CSSProperties} onPointerMove={(event) => { if (event.buttons === 1) { const rect = event.currentTarget.getBoundingClientRect(); setSliderPosition(Math.max(8, Math.min(92, ((event.clientX - rect.left) / rect.width) * 100))); } }}>
-            <img className="comparison-after" src={assets.hair} alt="After texture study: glossy, healthy-looking hair" loading="lazy" /><div className="comparison-before"><img src="https://images.unsplash.com/photo-1522338140262-f46f5913618a?auto=format&fit=crop&w=1400&q=85" alt="Before texture study: natural hair texture" loading="lazy" /></div><div className="comparison-divider"><span><ArrowLeft size={13} /><ArrowRight size={13} /></span></div><span className="comparison-label comparison-label--before">Before</span><span className="comparison-label comparison-label--after">After</span><input className="comparison-range" aria-label="Compare before and after texture studies" type="range" min="8" max="92" value={sliderPosition} onChange={(event) => setSliderPosition(Number(event.target.value))} />
+            <img className="comparison-after" src={sectionImages.afterHair} alt="After texture study: healthy smooth long hair with natural shine" loading="lazy" /><div className="comparison-before"><img src={sectionImages.beforeHair} alt="Before texture study: dry-looking long hair with less shine" loading="lazy" /></div><div className="comparison-divider"><span><ArrowLeft size={13} /><ArrowRight size={13} /></span></div><span className="comparison-label comparison-label--before">Before</span><span className="comparison-label comparison-label--after">After</span><input className="comparison-range" aria-label="Compare before and after texture studies" type="range" min="8" max="92" value={sliderPosition} onChange={(event) => setSliderPosition(Number(event.target.value))} />
           </div>
         </section>
 
@@ -390,7 +406,7 @@ export default function Home() {
         </section>
 
         <section className="brand-story section-sand">
-          <div className="brand-story-media js-reveal"><img src={assets.bathroom} alt="Premium Lumière hair oil bottle in a warm stone bathroom" loading="lazy" /><span className="image-caption">Made for modern rituals / 11</span></div>
+          <div className="brand-story-media js-reveal"><img src={sectionImages.shampooHairCombination} alt="Woman with long healthy hair beside a subtly placed Lumière shampoo bottle in a warm stone setting" loading="lazy" /><span className="image-caption">Made for modern washes / 11</span></div>
           <div className="brand-story-copy js-reveal"><ChapterLabel number="11">Rooted in nature</ChapterLabel><h2>Created for<br /><em>modern rituals.</em></h2><p>We look to the garden, the apothecary, and the quiet intelligence of the natural world. Then we refine. Lumière is botanical inspiration shaped into a premium hair ritual for the pace of now.</p><p>Conscious beauty is not a compromise. It is choosing less, making it matter, and leaving room for the senses.</p><button className="text-button" onClick={() => toast("Our story is being written with intention.")}>Read our story <ArrowRight size={14} /></button></div>
         </section>
 
@@ -410,7 +426,7 @@ export default function Home() {
       </main>
 
       <footer className="site-footer">
-        <div className="footer-top"><div className="footer-brand"><BrandMark /><p>A botanical hair ritual for modern light.</p><a href="mailto:hello@lumierehaircare.com">hello@lumierehaircare.com <ArrowUpRight size={13} /></a></div><div className="footer-column"><span className="footer-label">Shop</span><a href="#collection">All products</a><a href="#featured">Hair oil</a><a href="#collection">Hair treatments</a><a href="#collection">New arrivals</a></div><div className="footer-column"><span className="footer-label">Explore</span><a href="#story">Our story</a><a href="#ingredients">Ingredients</a><a href="#ritual">Ritual</a><a href="#journal">Journal</a></div><div className="footer-column"><span className="footer-label">Help</span><a href="mailto:hello@lumierehaircare.com">Contact</a><a href="#top" onClick={(event) => { event.preventDefault(); toast("Shipping details will be available at checkout."); }}>Shipping</a><a href="#top" onClick={(event) => { event.preventDefault(); toast("Returns are being prepared for launch."); }}>Returns</a><a href="#top" onClick={(event) => { event.preventDefault(); toast("FAQs are coming soon."); }}>FAQ</a></div><div className="footer-column footer-follow"><span className="footer-label">Follow</span><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={13} /></a><a href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok <ArrowUpRight size={13} /></a><a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest <ArrowUpRight size={13} /></a></div></div>
+        <div className="footer-top"><div className="footer-brand"><BrandMark /><p>A botanical hair ritual for modern light.</p><a href="mailto:hello@lumierehaircare.com">hello@lumierehaircare.com <ArrowUpRight size={13} /></a></div><div className="footer-column"><span className="footer-label">Shop</span><a href="#collection">All products</a><a href="#featured">Botanical shampoo</a><a href="#collection">Hair treatments</a><a href="#collection">New arrivals</a></div><div className="footer-column"><span className="footer-label">Explore</span><a href="#story">Our story</a><a href="#ingredients">Ingredients</a><a href="#ritual">Ritual</a><a href="#journal">Journal</a></div><div className="footer-column"><span className="footer-label">Help</span><a href="mailto:hello@lumierehaircare.com">Contact</a><a href="#top" onClick={(event) => { event.preventDefault(); toast("Shipping details will be available at checkout."); }}>Shipping</a><a href="#top" onClick={(event) => { event.preventDefault(); toast("Returns are being prepared for launch."); }}>Returns</a><a href="#top" onClick={(event) => { event.preventDefault(); toast("FAQs are coming soon."); }}>FAQ</a></div><div className="footer-column footer-follow"><span className="footer-label">Follow</span><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={13} /></a><a href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok <ArrowUpRight size={13} /></a><a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest <ArrowUpRight size={13} /></a></div></div>
         <div className="footer-bottom"><span>© 2026 Lumière Haircare. All rights reserved.</span><div><a href="#top">Privacy policy</a><a href="#top">Terms &amp; conditions</a></div><span className="footer-end-mark"><img src={assets.mark} alt="" /></span></div>
       </footer>
 
