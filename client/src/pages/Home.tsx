@@ -52,7 +52,7 @@ const sectionImages = {
   ritualApply: assets.bathroom,
   ritualMassage: assets.longHairReference,
   ritualRestore: assets.hair,
-  beforeHair: assets.hair,
+  beforeHair: "/assets/lumiere-before-hair.png",
   afterHair: assets.longHairReference,
   lifestyleBeauty: assets.lifestyle,
   shampooHairCombination: assets.product,
