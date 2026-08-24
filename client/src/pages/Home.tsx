@@ -37,7 +37,7 @@ const assets = {
   bathroom: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88",
   hair: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=88",
   longHairReference: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=88",
-  mobileHero: "https://images.unsplash.com/photo-1556229010-4c3e0d2e5c9a?auto=format&fit=crop&w=1200&q=88",
+  mobileHero: "/assets/lumiere-mobile-hero.png",
   mark: "/favicon.svg",
 };
 
