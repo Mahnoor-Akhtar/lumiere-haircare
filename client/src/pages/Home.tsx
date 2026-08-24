@@ -316,7 +316,7 @@ export default function Home() {
 
       <main>
         <section className="hero" id="top">
-          <video className="hero-video hero-video--desktop" autoPlay muted loop playsInline aria-label="Lumière desktop shampoo campaign video" onError={(event) => { event.currentTarget.style.display = "none"; }}><source src={assets.heroVideo} type="video/mp4" /></video>
+          <video className="hero-video hero-video--desktop" autoPlay muted loop playsInline preload="auto" aria-label="Lumière desktop shampoo campaign video"><source src={assets.heroVideo} type="video/mp4" /></video>
           <div className="hero-mobile-image" role="img" aria-label="Lumière nourishing shampoo bottle with botanical extracts" style={{ backgroundImage: `url(${assets.mobileHero})` }} />
           <div className="hero-fallback" style={{ backgroundImage: `url(${assets.product})` }} />
           <div className="hero-shade" />
