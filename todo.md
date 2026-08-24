@@ -1,5 +1,9 @@
 # Lumière follow-up
 
+- [x] Use the existing hero video on desktop widths.
+- [x] Use the supplied vertical shampoo image on mobile widths.
+- [x] Validate the hero media switch on desktop and mobile.
+
 - [x] Restore the original non-video campaign image references.
 - [x] Use the supplied long-hair image for the hair-beauty section without reusing it for product sections.
 - [x] Validate the restored image map on desktop and mobile.

@@ -37,6 +37,7 @@ const assets = {
   bathroom: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88",
   hair: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=88",
   longHairReference: "/manus-storage/lumiere-long-hair-reference_cb527a4d.png",
+  mobileHero: "/manus-storage/lumiere-mobile-hero-shampoo_aadef264.png",
   mark: "/manus-storage/lumiere-mark_fb5c4929.png",
 };
 
@@ -315,6 +316,8 @@ export default function Home() {
 
       <main>
         <section className="hero" id="top">
+          <video className="hero-video hero-video--desktop" autoPlay muted loop playsInline aria-label="Lumière desktop shampoo campaign video" onError={(event) => { event.currentTarget.style.display = "none"; }}><source src={assets.heroVideo} type="video/mp4" /></video>
+          <div className="hero-mobile-image" role="img" aria-label="Lumière nourishing shampoo bottle with botanical extracts" style={{ backgroundImage: `url(${assets.mobileHero})` }} />
           <div className="hero-fallback" style={{ backgroundImage: `url(${assets.product})` }} />
           <div className="hero-shade" />
           <div className="hero-foot"><span>Scroll to discover</span><span className="hero-scroll-line" /></div>
