@@ -1,5 +1,13 @@
 # Lumière follow-up
 
+- [x] Restore the original non-video campaign image references.
+- [x] Use the supplied long-hair image for the hair-beauty section without reusing it for product sections.
+- [x] Validate the restored image map on desktop and mobile.
+
+- [ ] Remove all video-derived still images from the storefront.
+- [ ] Generate unique professional photography for luxury shampoos, long hair, herbs, rituals, results, products, journal, and social gallery sections.
+- [ ] Map the generated assets one-to-one and validate desktop/mobile rendering.
+
 - [x] Read the newly provided brief and map its requirements to the current storefront.
 - [x] Implement the requested brief changes without breaking existing interactions.
 - [x] Validate the revised storefront on desktop and mobile.
